@@ -148,11 +148,11 @@ namespace EQTool.UI
             {
                 return;
             }
-            var zonetimer = ZoneSpawnTimes.GetSpawnTime(e.Name, activePlayer?.Player?.Zone);
+            var time = ZoneSpawnTimes.GetSpawnTime(e.Name, activePlayer?.Player?.Zone);
             var add = new CustomTimer
             {
                 Name = "--Dead-- " + e.Name,
-                DurationInSeconds = (int)zonetimer.TotalSeconds,
+                DurationInSeconds = (int)time.TotalSeconds,
                 SpellNameIcon = "Disease Cloud",
                 SpellType = EQToolShared.Enums.SpellTypes.RespawnTimer
             };
